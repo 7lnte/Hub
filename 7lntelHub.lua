@@ -1,3 +1,4 @@
+_E1LGpbn6X36OGBPM, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
 
 if game:GetService("CoreGui"):FindFirstChild("incognito") then
     oldstring = loadstring
