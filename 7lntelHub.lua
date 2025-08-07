@@ -1,4 +1,4 @@
-_E1LGpbn6X36OGBPM, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
+getfenv().LPH_NO_VIRTUALIZE = function(f) return f end;
 
 if game:GetService("CoreGui"):FindFirstChild("incognito") then
     oldstring = loadstring
