@@ -1,5 +1,6 @@
 
 
+]]--
 if game:GetService("CoreGui"):FindFirstChild("incognito") then
     oldstring = loadstring
     getfenv().loadstring = function(code)
@@ -34,7 +35,7 @@ getgenv().setclipboard = function(data)
     a.PlaceholderText = ''
     a.Text = copy
     a.ClearTextOnFocus = false
-    a.Size = UDim2.new(.1, 0, .15, 0)
+    a.Size = UDim2.new(0.1, 0, 0.15, 0)
     a.Position = UDim2.new(10, 0, 10, 0)
     a:CaptureFocus()
     a = Enum.KeyCode
@@ -73,7 +74,7 @@ getgenv().setrbxclipboard = function(data)
     a.PlaceholderText = ''
     a.Text = copy
     a.ClearTextOnFocus = false
-    a.Size = UDim2.new(.1, 0, .15, 0)
+    a.Size = UDim2.new(0.1, 0, 0.15, 0)
     a.Position = UDim2.new(10, 0, 10, 0)
     a:CaptureFocus()
     a = Enum.KeyCode
@@ -112,7 +113,7 @@ getgenv().toclipboard = function(data)
     a.PlaceholderText = ''
     a.Text = copy
     a.ClearTextOnFocus = false
-    a.Size = UDim2.new(.1, 0, .15, 0)
+    a.Size = UDim2.new(0.1, 0, 0.15, 0)
     a.Position = UDim2.new(10, 0, 10, 0)
     a:CaptureFocus()
     a = Enum.KeyCode
@@ -180,8 +181,8 @@ else
 	_G.lmao24 = "Disabled"
 end
 function save()
-	if not isfolder("7lntel x Hub") and not nosaves then
-		makefolder("7lntel x Hub")
+	if not isfolder("3067x APEC") and not nosaves then
+		makefolder("3067x APEC")
 		nosaves = true
 		task.wait()
 		local update = {
@@ -189,7 +190,7 @@ function save()
 			["opaque"] = settings["opaque"]
 		}
 		task.wait()
-		writefile([[7lntel x Hub/7lntel x Hub Settings.json]], HttpService:JSONEncode(update))
+		writefile([[3067x APEC/3067x APEC Settings.json]], HttpService:JSONEncode(update))
 	end
 end
 function updatesaves()
@@ -197,14 +198,14 @@ function updatesaves()
 		ui_bind = ui_bind;
 		opaque = opaque;
 	}
-	writefile("7lntel x Hub/7lntel x Hub Settings.json", HttpService:JSONEncode(update))
+	writefile("3067x APEC/3067x APEC Settings.json", HttpService:JSONEncode(update))
 end
 task.wait()
 function loadsettings()
 	task.wait(1)
-	if isfolder("7lntel x Hub") and isfile([[7lntel x Hub/7lntel x Hub Settings.json]]) then
+	if isfolder("3067x APEC") and isfile([[3067x APEC/3067x APEC Settings.json]]) then
 		local success, response = pcall(function()
-			local settings = HttpService:JSONDecode(readfile([[7lntel x Hub/7lntel x Hub Settings.json]]))
+			local settings = HttpService:JSONDecode(readfile([[3067x APEC/3067x APEC Settings.json]]))
 			if settings.ui_bind ~= nil or settings.ui_bind ~= "null" then
 				if settings.ui_bind == "Enum.KeyCode.RightControl" then
 					getgenv().SkyhubKeybind = Enum.KeyCode.RightControl
@@ -474,7 +475,7 @@ else
 			Library.Notify("OMG VULN FOUND","if you want you can join the discord server and share it in #share-vuln-games and provides an explaination",30)
 		end
 	end
-	local Window = Library.CreateLib("7lntel x Hub", OptTheme)
+	local Window = Library.CreateLib("3067x APEC", OptTheme)
 	local Discord = Window:NewTab("Discords",16795709379)
 	local DiscordSection = Discord:NewSection("Discords")
 	DiscordSection:NewButton("Discord Invite", "copys discord link", function()
@@ -583,7 +584,7 @@ else
 		Terrain.WaterReflectance = 0
 		Terrain.WaterTransparency = 0
 		Lighting.GlobalShadows = false
-		Lighting.FogEnd = 9e9
+		Lighting.FogEnd = 9000000000
 		for i,v in pairs(game:GetDescendants()) do
 			if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
 				v.Material = "Plastic"
@@ -691,7 +692,7 @@ else
 		if method == 'Kick' then
 		
 			print("Tried To kick")
-			wait(9e9)
+			wait(9000000000)
 			return nil
 
 		end
@@ -1509,7 +1510,7 @@ else
 		SearchBox.Text = ""
 		SearchBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 		SearchBox.TextScaled = true
-		SearchBox.TextSize = 14.000
+		SearchBox.TextSize = 14
 		SearchBox.TextWrapped = true
 		spawn(function()
 			while wait() do
@@ -1570,7 +1571,7 @@ else
 		ScriptTitle.Text = "Script Title"
 		ScriptTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
 		ScriptTitle.TextScaled = true
-		ScriptTitle.TextSize = 14.000
+		ScriptTitle.TextSize = 14
 		ScriptTitle.TextWrapped = true
 		ScriptTitle.TextXAlignment = Enum.TextXAlignment.Left
 		ScriptAuthor.Name = "ScriptAuthor"
@@ -1581,7 +1582,7 @@ else
 		ScriptAuthor.Font = Enum.Font.Gotham
 		ScriptAuthor.Text = "ScriptAuthor"
 		ScriptAuthor.TextColor3 = Color3.fromRGB(255, 255, 255)
-		ScriptAuthor.TextSize = 14.000
+		ScriptAuthor.TextSize = 14
 		ScriptAuthor.TextWrapped = true
 		ScriptAuthor.TextXAlignment = Enum.TextXAlignment.Left
 		ScriptGame.Name = "ScriptGame"
@@ -1592,7 +1593,7 @@ else
 		ScriptGame.Font = Enum.Font.Gotham
 		ScriptGame.Text = "Game"
 		ScriptGame.TextColor3 = Color3.fromRGB(255, 255, 255)
-		ScriptGame.TextSize = 14.000
+		ScriptGame.TextSize = 14
 		ScriptGame.TextWrapped = true
 		ScriptGame.TextXAlignment = Enum.TextXAlignment.Left
 		VerifiedScriptFrame.Name = "VerifiedScriptFrame"
@@ -1609,7 +1610,7 @@ else
 		ScriptTitle_2.Text = "Script Title"
 		ScriptTitle_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 		ScriptTitle_2.TextScaled = true
-		ScriptTitle_2.TextSize = 14.000
+		ScriptTitle_2.TextSize = 14
 		ScriptTitle_2.TextWrapped = true
 		ScriptTitle_2.TextXAlignment = Enum.TextXAlignment.Left
 		ScriptAuthor_2.Name = "ScriptAuthor"
@@ -1620,7 +1621,7 @@ else
 		ScriptAuthor_2.Font = Enum.Font.Gotham
 		ScriptAuthor_2.Text = "ScriptAuthor"
 		ScriptAuthor_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-		ScriptAuthor_2.TextSize = 14.000
+		ScriptAuthor_2.TextSize = 14
 		ScriptAuthor_2.TextWrapped = true
 		ScriptAuthor_2.TextXAlignment = Enum.TextXAlignment.Left
 		ScriptGame_2.Name = "ScriptGame"
@@ -1631,7 +1632,7 @@ else
 		ScriptGame_2.Font = Enum.Font.Gotham
 		ScriptGame_2.Text = "Game"
 		ScriptGame_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-		ScriptGame_2.TextSize = 14.000
+		ScriptGame_2.TextSize = 14
 		ScriptGame_2.TextWrapped = true
 		ScriptGame_2.TextXAlignment = Enum.TextXAlignment.Left
 		Info.Name = "Info"
@@ -1754,7 +1755,7 @@ else
 		Description.Font = Enum.Font.Gotham
 		Description.Text = "Desc"
 		Description.TextColor3 = Color3.fromRGB(255, 255, 255)
-		Description.TextSize = 20.000
+		Description.TextSize = 20
 		Description.TextWrapped = true
 		Description.TextScaled = true
 		Description.TextXAlignment = Enum.TextXAlignment.Left
@@ -1768,7 +1769,7 @@ else
 		Description_2.Font = Enum.Font.Gotham
 		Description_2.Text = "Desc"
 		Description_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-		Description_2.TextSize = 20.000
+		Description_2.TextSize = 20
 		Description_2.TextWrapped = true
 		Description_2.TextScaled = true
 		Description_2.TextXAlignment = Enum.TextXAlignment.Left
@@ -1822,7 +1823,7 @@ else
 		CommentsText.Font = Enum.Font.GothamBold
 		CommentsText.Text = "Comments"
 		CommentsText.TextColor3 = Color3.fromRGB(255, 255, 255)
-		CommentsText.TextSize = 14.000
+		CommentsText.TextSize = 14
 		Comments_2.Name = "Comments"
 		Comments_2.Parent = Inner
 		Comments_2.Active = true
@@ -1852,20 +1853,20 @@ else
 		Author_2.Name = "Author"
 		Author_2.Parent = Comment
 		Author_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Author_2.BackgroundTransparency = 1.000
+		Author_2.BackgroundTransparency = 1
 		Author_2.BorderSizePixel = 0
 		Author_2.Position = UDim2.new(0, 50, 0, 5)
 		Author_2.Size = UDim2.new(0, 200, 0, 25)
 		Author_2.Font = Enum.Font.GothamBold
 		Author_2.Text = "Author"
 		Author_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-		Author_2.TextSize = 20.000
+		Author_2.TextSize = 20
 		Author_2.TextWrapped = true
 		Author_2.TextXAlignment = Enum.TextXAlignment.Left
 		ProfilePicture_2.Name = "ProfilePicture"
 		ProfilePicture_2.Parent = Comment
 		ProfilePicture_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		ProfilePicture_2.BackgroundTransparency = 1.000
+		ProfilePicture_2.BackgroundTransparency = 1
 		ProfilePicture_2.Position = UDim2.new(0, 5, 0, 5)
 		ProfilePicture_2.Size = UDim2.new(0, 40, 0, 40)
 		ProfilePicture_2.Image = "rbxassetid://17093333262"
@@ -2079,7 +2080,7 @@ else
 	local Obbys = Window:NewTab("Obbys")
 	local ObbysSection = Obbys:NewSection("Obbys")
 	ObbysSection:NewButton("Method 1", "auto farm/tp to end if supported game", function()
-		if game.PlaceId == 5972698540 then 
+		if game.PlaceId == 5972698540 then -- easy obby
 			game:GetService("StarterGui"):SetCore("SendNotification",  {
 				Title = "Working";
 				Text = "its working just please wait";
@@ -2091,7 +2092,7 @@ else
 			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Stages.Stage130.Checkpoint.Checkpoint.CFrame
 			wait(2)
 			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Stages.END["The End Obby..!!"].Checkpoint.CFrame
-		elseif game.PlaceId == 13413789725 then 
+		elseif game.PlaceId == 13413789725 then -- emo obby
 			getgenv().collectOrbsToggle = true
 			spawn(function()
 				local checkpoints = game:GetService("Workspace").Checkpoints:GetChildren()
@@ -2104,7 +2105,7 @@ else
 					end
 					for i, checkpoint in ipairs(checkpoints) do
 						game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = checkpoint.CFrame
-						wait(0.05) 
+						wait(0.05) -- Adjust the wait time as needed
 					end
 					game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(160, 285, 371)
 					wait(10.8)
@@ -2112,59 +2113,59 @@ else
 					wait(2)
 				end
 			end)
-		elseif game.PlaceId == 11364184405 then 
+		elseif game.PlaceId == 11364184405 then -- 725 obby
 			while true do
 				wait()
 				game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Checkpoints.Floor8["725"].Detector.CFrame
 				wait(2)
 				game:GetService("ReplicatedStorage"):WaitForChild("Honeypot"):WaitForChild("Internal"):WaitForChild("RemoteStorage"):WaitForChild("Rebirth - RemoteEvent"):FireServer()
 			end
-		elseif game.PlaceId == 10760024537 then 
+		elseif game.PlaceId == 10760024537 then -- ultimate easy obby
 			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Checkpoints["50"].DetectorPart.CFrame
-		elseif game.PlaceId == 3587619225 then
+		elseif game.PlaceId == 3587619225 then -- mega easy obby 825 stages
 			local checkpoints = game:GetService("Workspace").Checkpoints:GetChildren()
 			table.sort(checkpoints, function(a, b)
 				return tonumber(a.Name) < tonumber(b.Name)
 			end)
 			for i, checkpoint in ipairs(checkpoints) do
 				game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = checkpoint.CFrame + Vector3.new(0, 5, 0)
-				wait(0.5) 
+				wait(0.5) -- Adjust the wait time as needed
 			end
-		elseif game.PlaceId == 8472851459 then 
+		elseif game.PlaceId == 8472851459 then -- really easy obby
 			local checkpoints = game:GetService("Workspace").Checkpoints:GetChildren()
 			table.sort(checkpoints, function(a, b)
 				return tonumber(a.Name) < tonumber(b.Name)
 			end)
 			for i, checkpoint in ipairs(checkpoints) do
 				game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = checkpoint.CFrame + Vector3.new(0, 5, 0)
-				wait(0.5) 
+				wait(0.5) -- Adjust the wait time as needed
 			end
-		elseif game.PlaceId == 12961669859 then 
+		elseif game.PlaceId == 12961669859 then -- Easy Fun Obby
 			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-301, 236, 78)
-		elseif game.PlaceId == 15736515144 then 
+		elseif game.PlaceId == 15736515144 then -- Barrys prison run classic V1
 			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3781, 1072, -502)
-		elseif game.PlaceId == 8712817601 then 
+		elseif game.PlaceId == 8712817601 then -- barrys prison V2
 			game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(10, 677, -915)
 			wait(1.25)
 			game:GetService("Players").LocalPlayer.Character.Humanoid.Jump = true
 			wait(5)
 			game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(-331, 873, -2726)
-		elseif game.PlaceId == 14184086618 then 
+		elseif game.PlaceId == 14184086618 then -- obby but bike
 			loadstring(game:HttpGet("https://github.com/KhSaeed90/Roblox/raw/workspace/14184086618"))()
-		elseif game.PlaceId == 13326256431 then 
+		elseif game.PlaceId == 13326256431 then -- obby but no jump
 			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Checkpoints["48"].CFrame
-		elseif game.PlaceId == 1946695497 then 
+		elseif game.PlaceId == 1946695497 then -- escape butcher obby
 			local checkpoints = game:GetService("Workspace").Stages:GetChildren()
 			table.sort(checkpoints, function(a, b)
 				return tonumber(a.Name) < tonumber(b.Name)
 			end)
 			for i, checkpoint in ipairs(checkpoints) do
 				game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = checkpoint.CFrame + Vector3.new(0, 5, 0)
-				wait(0.5) 
+				wait(0.5) -- Adjust the wait time as needed
 			end
 		elseif game.PlaceId == 12357508217 then
 			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Checkpoints["60"].Detector.CFrame
-		else -
+		else -- universal
 			game:GetService("StarterGui"):SetCore("SendNotification",  {
 				Title = "Game Not Supported";
 				Text = "game not supported so it may be trash or not work at all";
@@ -2179,7 +2180,7 @@ else
 				end)
 				for i, checkpoint in ipairs(checkpoints) do
 					game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = checkpoint.CFrame
-					wait(6) 
+					wait(6) -- Adjust the wait time as needed
 				end
 			elseif game:GetService("Workspace"):FindFirstChild('Stages') then
 				local checkpoints = game:GetService("Workspace").Stages:GetChildren()
@@ -2188,7 +2189,7 @@ else
 				end)
 				for i, checkpoint in ipairs(checkpoints) do
 					game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = checkpoint.CFrame
-					wait(6) 
+					wait(6) -- Adjust the wait time as needed
 				end
 			else
 				game:GetService("StarterGui"):SetCore("SendNotification",  {
@@ -2378,14 +2379,15 @@ else
 		fovCircleGui.ImageColor3 = Color3.new(1, 1, 1)
 		fovCircleGui.BackgroundTransparency = 1
 		fovCircleGui.Visible = false
-		fovCircleGui.ZIndex = 0 
+		fovCircleGui.ZIndex = 0 -- Ensure it's behind other GUI elements
 
+-- Function to check if a player is within the FOV and not obstructed by walls
 		local function isPlayerVisible(targetPlayer)
 			if not targetPlayer.Character or not targetPlayer.Character:FindFirstChild("Head") then
 				return false
 			end
 			if teamCheckActive and targetPlayer.Team == localPlayer.Team then
-				return false 
+				return false -- Player is on the same team
 			end
 			local targetHeadPosition = targetPlayer.Character.Head.Position
 			local vectorToTarget = (targetHeadPosition - camera.CFrame.Position).unit
@@ -2394,12 +2396,12 @@ else
 			if part and part:IsDescendantOf(targetPlayer.Character) then
 				local dotProduct = camera.CFrame.LookVector:Dot(vectorToTarget)
 				local angle = math.deg(math.acos(dotProduct))
-				return angle <= (fovRadius / 2) 
+				return angle <= (fovRadius / 2) -- Player is within FOV
 			end
-			return false 
+			return false -- Player is obstructed by walls
 		end
 
-
+-- Toggle button functionality
 		toggleButton.MouseButton1Click:Connect(function()
 			lockOnActive = not lockOnActive
 			toggleButton.Text = lockOnActive and "Lock-On Active" or "Toggle Lock-On"
@@ -2410,14 +2412,14 @@ else
 			toggleTeamButton.Text = teamCheckActive and "Team Check Active" or "Toggle Team Check"
 		end)
 
-
+-- Function to handle touch input
 		local function onTouchStarted(touch)
 			currentTouch = touch.Position
 			fovCircleGui.Position = UDim2.new(0, touch.Position.X - fovRadius, 0, touch.Position.Y - fovRadius)
 			fovCircleGui.Visible = true
 		end
 
-
+-- Function to handle touch ended
 		local function onTouchEnded(touch)
 			if currentTouch and currentTouch == touch.Position then
 				currentTouch = nil
@@ -2425,7 +2427,7 @@ else
 			end
 		end
 
-
+-- Connect the touch event handlers
 		UserInputService.TouchStarted:Connect(onTouchStarted)
 		UserInputService.TouchEnded:Connect(onTouchEnded)
 		RunService.RenderStepped:Connect(function()
@@ -2489,12 +2491,12 @@ else
 	MainSection:NewButton("Run The Strongest Battlegrounds", "ReaperHub", function()
 		loadstring(game:HttpGet('https://rawscripts.net/raw/KJ-The-Strongest-Battlegrounds-Reaper-Hub-KJ-UPDATE-25134'))()
 	end)
-	local executors2345 = Window:NewTab("Executors", 10507357657)-- 
-	local executors2345Section = executors2345:NewSection("Executors")-- 
-	executors2345Section:NewButton("Synapse X", "uses synapse x functions", function()-- 
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Synapse_UI.txt'))()-- 
-	end)
-
+	local executors2345 = Window:NewTab("Executors", 10507357657)-- made by 3067x APEC
+	local executors2345Section = executors2345:NewSection("Executors")-- made by 3067x APEC
+	executors2345Section:NewButton("Synapse X", "uses synapse x functions", function()-- made by 3067x APEC
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Synapse_UI.txt'))()-- made by 3067x APEC
+	end)-- made By 3067x APEC
+-- made by 3067x APEC ^^^^^
 	local PlaceInfo = Window:NewTab("Place Info", 10507357657)
 	local PlaceInfoSection = PlaceInfo:NewSection("Place Info")
 	PlaceInfoSection:NewButton(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Description, function()
